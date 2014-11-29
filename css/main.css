@@ -1,0 +1,32 @@
+body {
+	background: url('../img/background.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+div, section {
+	border: 1px solid darkgreen;
+}
+
+.content-background {
+	height: 100%;
+	min-height: 900px;
+
+	background: url('../img/strum.jpeg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.content {
+	height: 100%;
+	min-height: 900px;
+	background-color: rgba(200, 200, 200, .5);
+}
+
+.options > input {
+	display: block;
+}
+
