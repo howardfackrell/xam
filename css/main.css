@@ -61,6 +61,11 @@ h2 {
 .options input {
 	margin: 0.5em;
 }
+
+.options label {
+	font-size: 1.5em;
+}
+
 .controls {
 	margin: 1em .25em;
 }
