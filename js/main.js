@@ -1,6 +1,18 @@
 var quiz = {
 	currentIndex : 0,
 	score : [],
+	done : function() {
+		return this.currentIndex >= this.questions.length  ;
+	},
+	numCorrect : function() {
+		var correct = 0;
+		for (s = 0; s < this.score.length; s++) {
+			if (this.score[s]) {
+				correct+=1;
+			}
+		}
+		return correct;
+	},
 	questions : [
 		{
 			question : "Wich one of these is the Bass Clef?",
@@ -74,25 +86,43 @@ $(document).ready(function() {
 	hideAnswer();
 	displayQuestion(quiz.currentIndex);
 	hideNextButton();
+	hideAgainButton();
 	clearOptions();
+	updateNumCorrect();
 
 	$("#check").on('click', function() {
 		showAnswer(currentQuestion().explanation);
 		showNextButton();
+		hideCheckButton();
 		quiz.score.push(checkAnswer());
+		updateNumCorrect();
 	});
 
 	$("#next").on('click', function() {
 		hideAnswer();
 		quiz.currentIndex = quiz.currentIndex+1;
+		if (quiz.done() === false) {
 		displayQuestion(quiz.currentIndex);
 		clearOptions();
+		hideNextButton();
+		showCheckButton();
+		} else {
+			hideCheckButton();
+			showAgainButton();
+		}
+	});
+
+	$("#again").on('click', function() {
+		location.reload();
 	});
 });
 
+var updateNumCorrect = function() {
+	$("#correct").html(quiz.numCorrect());
+}
+
 var checkAnswer = function() {
 	var answer  = $('input[name=answer]:checked').val();
-	console.log(answer + "-----" + currentQuestion().answer);
 	return answer == currentQuestion().answer;
 }
 
@@ -102,6 +132,22 @@ var hideNextButton = function() {
 
 var showNextButton = function() {
 	$("#next").show();
+}
+
+var hideCheckButton = function() {
+	$("#check").hide();
+}
+
+var showCheckButton = function() {
+	$("#check").show();
+}
+
+var hideAgainButton = function() {
+	$("#again").hide();
+}
+
+var showAgainButton = function() {
+	$("#again").show();
 }
 
 var hideAnswer = function() {
@@ -114,7 +160,7 @@ var showAnswer = function(explanation) {
 
 var displayQuestion = function(n) {	
 	var question = quiz.questions[n];
-	$("#question-number").html(n);
+	$("#question-number").html(n + 1);
 	$("#context-image").attr("src", question.img);
 	$("#the-question").text(question.question);
 	$("label[for=a]").html(question.options.a);
