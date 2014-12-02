@@ -19,12 +19,12 @@ var quiz = {
 			img : "img/ClefSymbols4.png",
 			options : {
 				a: "The first one",
-				b: "the second",
-				c: "the third",
-				d: "must be the last one"
+				b: "The second",
+				c: "The third",
+				d: "Must be the last one"
 			},
 			answer: "b",
-			explanation: "That's right, the one you've probably never seen is the tennor clef."
+			explanation: "It's the second one.  The order in the picture is Treble, Bass, Tennor (or Alto), and the percussion clef."
 
 		},
 		{
@@ -32,24 +32,24 @@ var quiz = {
 			img : "img/fermata-scaled.jpeg",
 			options : {
 				a: "It looks like an eye, so the conductor will be watching you",
-				b: "Watch the conductor, she'll hold it as long as she wants",
-				c: "increase the volume",
-				d: "decrease the volume"
+				b: "Watch the conductor, she'll hold the note as long as she wants",
+				c: "Increase the volume",
+				d: "Decrease the volume"
 			},
 			answer : "b",
-			explanation: "You should watch the conductor, he or she can choose how long this note should be held."
+			explanation: "You should watch the conductor, he or she can choose how long the note under the fermata should be held."
 		},
 		{
 			question : "What is this symbol?",
 			img : "img/coda-scaled.png",
 			options : {
 				a: "a Target",
-				b: "a whole note",
+				b: "a Whole note",
 				c: "a Coda",
-				d: "a "
+				d: "a Grand Pause"
 			},
 			answer : "c",
-			explanation: "It's a Coda."
+			explanation: "It's a Coda.  It marks the concluding passage of a piece or movement."
 		},
 		{
 			question : "These are time signatures.  What does the bottom number mean in a time signature?",
@@ -57,7 +57,7 @@ var quiz = {
 			options : {
 				a: "How many beats should be in a measure",
 				b: "It represents how fast the music should be played",
-				c: "It's the ration of quarter notes to whole notes the music should have",
+				c: "It's the ratio of quarter notes to whole notes",
 				d: "Which note should get a single beat"
 			},
 			answer : "d",
