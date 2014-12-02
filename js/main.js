@@ -40,28 +40,28 @@ var quiz = {
 			explanation: "It's a Coda."
 		},
 		{
-			question : "This symbol is a fermata.  What does it mean?",
-			img : "img/fermata.jpeg",
+			question : "These are time signatures.  What does the bottom number mean in a time signature?",
+			img : "img/time-signatures.png",
 			options : {
-				a: "It looks like an eye, so the conductor will be watching you",
-				b: "Watch the conductor, she'll hold it as long as she wants",
-				c: "increase the volume",
-				d: "decrease the volume"
+				a: "How many beats should be in a measure",
+				b: "It represents how fast the music should be played",
+				c: "It's the ration of quarter notes to whole notes the music should have",
+				d: "Which note should get a single beat"
 			},
-			answer : "b",
-			explanation: "You should watch the conductor, he or she can choose how long this note should be held."
+			answer : "d",
+			explanation: "It tells which note should get a single beat.  The top number is how many beats will be in a measure."
 		},
 		{
-			question : "This symbol is a fermata.  What does it mean?",
-			img : "img/fermata.jpeg",
+			question : "This symbol is a rest.  This rest will have the same duration as which note?",
+			img : "img/quarter-rest.jpeg",
 			options : {
-				a: "It looks like an eye, so the conductor will be watching you",
-				b: "Watch the conductor, she'll hold it as long as she wants",
-				c: "increase the volume",
-				d: "decrease the volume"
+				a: "A whole note",
+				b: "A half note",
+				c: "A quarter note",
+				d: "An eighth note"
 			},
-			answer : "b",
-			explanation: "You should watch the conductor, he or she can choose how long this note should be held."
+			answer : "c",
+			explanation: "It's a quarter rest and has the same duration as a quarter note."
 		}
 	]
 }
