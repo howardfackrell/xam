@@ -17,7 +17,7 @@ var quiz = {
 		},
 		{
 			question : "This symbol is a fermata.  What does it mean?",
-			img : "img/fermata.jpeg",
+			img : "img/fermata-scaled.jpeg",
 			options : {
 				a: "It looks like an eye, so the conductor will be watching you",
 				b: "Watch the conductor, she'll hold it as long as she wants",
@@ -29,7 +29,7 @@ var quiz = {
 		},
 		{
 			question : "What is this symbol?",
-			img : "img/coda.png",
+			img : "img/coda-scaled.png",
 			options : {
 				a: "a Target",
 				b: "a whole note",
