@@ -5,39 +5,50 @@
 	<title>Xam</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/main.css" />
-	<script src="js/scala-quiz.js" ></script>
+	
+	<link href='http://fonts.googleapis.com/css?family=Lato:400,900italic|Damion' rel='stylesheet' type='text/css'>
 </head>
 <body class="container">
 
   <div class="row-fluid content-background">
     <div class="row-fluid content" >
       <h1>Do you know your music?</h1>
-      <h3>Question <span id="question-number">1</span> of 5</h3>
+      <h2>Question <span id="question-number">1</span> of 5, <span id="correct">0</span> correct</h3>
       
 
       <div class="row-fluid">
         <div class="question row-fluid">
-          <div id="question" class="col-sm-8">
-            <p>Wich one of these is the bass clef?</p>
+          <div class="col-sm-12 question-img">
+            <img id="context-image" src="img/ClefSymbols4.png" />  
           </div>
-          <div class="question-image col-sm-4">
-            <img src="img/trebble.png" />
+          <div>
+            <p id="the-question">1.  Wich one of these is the Bass Clef?</p>                              
           </div>
         </div>
 
-        <div class="options row-fluid">
-          <div class="col-sm-12">
-          <input type="radio">a</input>
-          <input type="radio">b</input>
-          <input type="radio">c</input>
-          <input type="radio">d</input>
+        <div class="row-fluid">
+          <div class="col-sm-12 options">
+            <input id="a" type="radio" name="answer" value="a"><label for="a">The first one</label><br>
+            <input id="b" type="radio" name="answer" value="b"><label for="b">The second </label><br>
+            <input id="c" type="radio" name="answer" value="c"><label for="c">Third</label><br>
+            <input id="d" type="radio" name="answer" value="d"><label for="d">Must be the last</label><br>                     
           </div>
+
+          <div class="col-sm-12 controls">
+            <button id="check">Check Answer</button> 
+            <button id="next">Next Question</button> 
+          </div>
+        </div>
+        <div class="row-fluid answer ">
+          <p class="col-sm-12">That's right, the one you've probably never seen is the tennor clef.</p>
+          
         </div>
               
-
     </div>
   </div>
-	
+
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>	
+<script src="js/main.js" ></script>
 </body>
 </html>
 
